@@ -1,11 +1,11 @@
 <%- include('partials/header') %>
 <h1 class="page-title">Détails de <%= pokemon.nom %></h1>
 <div class="container-detail">
-  <img class="pokemon-image" src="/img/<%= pokemon.numero %>.png" alt="image de <%= pokemon.nom %>" />
+  <img class="pokemon-image" src="/img/<%= pokemon.id %>.png" alt="image de <%= pokemon.nom %>" />
   <div class="pokemon-details">
-    <h2 class="pokemon-name">#<%= pokemon.numero %> <%= pokemon.nom %></h2>
+    <h2 class="pokemon-name">#<%= pokemon.id %> <%= pokemon.nom %></h2>
     <div class="pokemon-types">
-      <% types.forEach(function(type) { %>
+      <% pokemon.types.forEach(function(type) { %>
         <span class="pokemon-type"  style="background-color: #<%= type.color %>;"><%= type.name %></span>
       <% }); %>
     </div>
